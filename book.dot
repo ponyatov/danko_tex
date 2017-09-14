@@ -1,0 +1,38 @@
+digraph {
+
+danko -> Book [ label=" isa" ];
+Book [shape=box];
+
+subgraph cluster_A {
+label="hypergroup:authors";
+rankdir=TD;
+"П.Е.Данко";
+"А.Г.Попов";
+"Т.Я.Кожевникова";
+"С.П.Данко";
+}
+
+"П.Е.Данко" -> danko [label=" author"];
+"А.Г.Попов" -> danko [label=" author"];
+"Т.Я.Кожевникова" -> danko [label=" author"];
+"С.П.Данко" -> danko [label=" author"];
+
+"П.Е.Данко" -> Author [label=" isa"];
+"А.Г.Попов" -> Author [label=" isa"];
+"Т.Я.Кожевникова" -> Author [label=" isa"];
+"С.П.Данко" -> Author [label=" isa"];
+Author [shape=box];
+Person [shape=box];
+Author -> Person [label=" ako"];
+
+title [label="Высшая математика\lв упражнениях и задачах"]; 
+title -> danko [label=" title"];
+title [shape=hexagon];
+
+title -> Title [label=" isa"];
+Title [shape=box];
+
+seven [label="7"];
+seven -> danko [label = " edition"];
+
+}

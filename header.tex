@@ -20,3 +20,29 @@
 }
 \newcommand{\secly}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
 \newcommand{\subsecly}[1]{\section*{#1}\addcontentsline{toc}{subsection}{#1}}
+
+% listings
+\usepackage{listings}
+\usepackage{ucs}
+\lstset{
+basicstyle=\small,
+frame=single,
+numbers=left,numberstyle=\small,numbersep=2mm,
+xleftmargin=3mm,xrightmargin=2mm,
+tabsize=4,
+keywordstyle=\color{red},
+commentstyle=\color{blue},
+extendedchars=\true,
+inputencoding=utf8,
+}
+\newcommand{\lst}[1]{\lstinputlisting{#1}}
+\newcommand{\lstx}[2]{\lstinputlisting[title=#2]{#1}}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\newcommand{\lstv}[2]{
+\begin{flushright}\noindent\small #2\end{flushright}
+\begin{oframed}\VerbatimInput[tabsize=4]{#1}\end{oframed}}
+
+% graphics
+\usepackage[pdftex]{graphicx}
+\newcommand{\fig}[3]{\bigskip\noindent\includegraphics[#3]{#1}\textbf{#2}\bigskip}
