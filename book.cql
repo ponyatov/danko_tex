@@ -17,11 +17,9 @@ match (x)-[:author]->(),(a:Author)
 	merge (x) -[:isa]-> (a); 
 
 match (book:danko)
-	merge (book)
-		<-[:title]-
-			(x:title{
-				title:"Высшая математика в упражнениях и задачах"})
-		-[:isa]-> (:class:Title{title:'Title'});
+	merge (book) <-[:title]- (x:title{
+		title:"Высшая математика в упражнениях и задачах"})
+	-[:isa]-> (:class:Title{title:'Title'});
 
 match (book:danko)
 	merge (book)
