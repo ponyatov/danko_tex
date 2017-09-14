@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Thu Sep 14 16:58:44 SAMT 2017
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=
+mainTexFile=danko.tex
+outputFile=danko.pdf
+langSpell=ru
+markDer=true
+srcDir=
