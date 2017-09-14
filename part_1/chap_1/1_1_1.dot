@@ -1,0 +1,15 @@
+digraph {
+
+Coordinate [shape=box];
+Axes [shape=box];
+Point [shape=box];
+
+M -> Point [label=" isa"];
+M -> x [label=" has"];
+x -> Coordinate [label=" isa"];
+M -> Ox [label=" on"];
+Ox -> Axes [label=" isa"];
+M -> "M(x)" [label=" write"];
+x -> "M(x)" [label=" write"];
+
+} 
