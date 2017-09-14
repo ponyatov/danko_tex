@@ -1,0 +1,36 @@
+digraph {
+
+d -> Distance [label=" isa",color=blue];
+Distance [shape=box];
+Measure [shape=box];
+Distance -> Measure [label = " ako",color=red];
+eq [label="="];
+eq -> Operator [label=" isa"];
+eq -> d [label = " L"];
+minus [label="-"];
+eq -> abs [label= " R"];
+abs [label="|   |"];
+abs -> minus [label=" L"];
+minus -> Operator [label=" isa"];
+abs -> Operator [label=" isa"];
+minus -> x_2 [label=" L"];
+minus -> x_1 [label=" R"];
+x_1 -> Coordinate [label=" isa",color=blue];
+x_2 -> Coordinate [label=" isa",color=blue];
+M_1 -> x_1 [label=" coordinate"];
+M_2 -> x_2 [label=" coordinate"];
+M_1 -> Point [label=" isa",color=blue];
+M_2 -> Point [label=" isa",color=blue];
+eq -> eq1 [label = " formula"];
+eq1 [label="(1)"];
+eq1 -> Formula [label = " isa",color=blue];
+{rank=same; eq eq1 Formula}
+eq1 -> danko [label = " in"];
+danko [label="book:danko"];
+Coordinate [shape=box];
+Point [shape=box];
+Formula [shape=box];
+Operator [shape=box];
+
+
+}
